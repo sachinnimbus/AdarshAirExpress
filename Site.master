@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title>AAE <%: Page.Title %></title>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference ID="BundleReference1" runat="server" Path="~/Content/css" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/nexus.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/jquery.min.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/bootstrap.min.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/jquery.isotope.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/jquery.slicknav.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/jquery.visible.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/modernizr.custom.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/scripts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/assets/js/slimbox2.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div id="pre_header" class="visible-lg"></div>
+        <div id="header" class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" title="">
+                        <img src="assets/img/air-express.jpg" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <!-- Top Menu -->
+                <div class="col-md-12 margin-top-30">
+                    <div id="hornav" class="pull-right visible-lg">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" class="glyphicon glyphicon-home">Home</a></li>
+                            <li><a href="About.aspx">About Us</a></li>
+                            <li><a href="#" class="glyphicon glyphicon-globe">Serivces</a> </li>
+                            <li><a href="#" class="glyphicon glyphicon-send">Track Shipment</a></li>
+                            <li><a href="Contact.aspx" class="glyphicon glyphicon-envelope">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a id="bannar" href="index.html" title="">
+                        <img src="assets/img/banner.png" alt="Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <marquee>Door to door express service. Railway forwarding, clearing station to station, cargo & courier services.</marquee>
+            </div>
+        </div>
+        <!-- === END HEADER === -->
+        <div id="content" class="container">
+            <!-- === BEGIN CONTENT === -->
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <section class="content-wrapper main-content clear-fix">
+                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            </section>
+        </div>
+        <!-- === END CONTENT === -->
+
+        <!-- Footer Menu -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div id="copyright" class="col-md-4">
+                        <p>(c) 2015 Your Copyright Info</p>
+                    </div>
+                    <div id="footermenu" class="col-md-8">
+                        <ul class="list-unstyled list-inline pull-right">
+                            <li>
+                                <a href="#" target="_blank">Sample Link</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Sample Link</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Sample Link</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">Sample Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
